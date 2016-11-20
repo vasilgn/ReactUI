@@ -1,0 +1,26 @@
+
+.input-group {
+    display: inline;
+    float: left;
+    margin-top: 250px;
+    padding-top: 250px;
+}
+button {
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+input {
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.top-nav {
+    border-radius: 5px;
+    background: deepskyblue;
+}
+.login-form{
+    position: inherit;
+    padding-top: 5px;
+}
+
