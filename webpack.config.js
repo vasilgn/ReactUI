@@ -1,6 +1,6 @@
 
-var path = require('path');
-var webpack = require('webpack');
+let path = require('path');
+let webpack = require('webpack');
 module.exports =  {
     devtool: 'source-map',
     entry: './main.js',
@@ -53,5 +53,4 @@ module.exports =  {
             }
         ]
     }
-
 };

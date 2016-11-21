@@ -2,19 +2,14 @@ import React from 'react';
 import {SinglePost} from './SinglePost.js';
 import {SingleComment} from './SingleComment.js';
 
-// class Postts {
-//     constructor(author,content,comments){
-//         this.author = author;
-//         this.content = content;
-//         this._comments = this.comments(comments);
+// export class Post extends React.Component{
+//     constructor(header,main,footer){
+//         super();
+//         this.header = '<header>'
 //     }
-//     get comments(){
-//         return this._comments;
-//     }
-//     set comments(comments){
-//         return this._comments.assert(comments,{});
-//     }
+//     getComments(data){
 //
+//     }
 //     createPost(){
 //
 //     }
@@ -22,7 +17,6 @@ import {SingleComment} from './SingleComment.js';
 
 
 export let Posts = React.createClass({
-    props: {},
     render: function () {
         return (
             <div>
