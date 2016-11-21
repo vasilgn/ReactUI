@@ -7,9 +7,7 @@ import {tweets} from './data.js';
 import {Nav} from './src/ui/main-nav.js';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+
 
     render() {
         return (
@@ -19,8 +17,8 @@ class App extends React.Component {
                         <h1>News feed</h1>
                     </div>
 
-                    <div className="col-xs-9" style={{background: 'cyan'}}>
-                        <Posts items={tweets}/>
+                    <div className="col-xs-9" ref={'main'} style={{background: 'cyan'}}>
+
                     </div>
             </div>
         );

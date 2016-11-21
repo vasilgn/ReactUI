@@ -6,6 +6,7 @@ export class Nav extends React.Component {
         this.state = {
             username: '',
             password: '',
+            style: {},
             isLoading: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -13,7 +14,8 @@ export class Nav extends React.Component {
     }
 
 
-    handleOnChange(e){
+    handleOnChange(e) {
+        console.log(`field: ${e.target.name}, value: ${e.target.value}`);
         this.setState({ [e.target.name]: e.target.value});
     }
 
@@ -21,11 +23,10 @@ export class Nav extends React.Component {
         e.preventDefault();
         console.dir(e);
         console.dir(this);
-        console.log('user: '+ this.state.username);
+        console.log('user: ' + this.state.username);
         console.log('pass: ' + this.state.password);
-        if(true){
-             console.log(this.target.style.display = 'none');
-
+        if (true) {
+            //TODO
         }
 
         // console.dir(this);
@@ -33,31 +34,32 @@ export class Nav extends React.Component {
     }
 
     render() {
-        const {username, password, isLoading } = this.state;
+        const {username, password, isLoading, style} = this.state;
         return (
             <div className={"navbar navbar-default"}>
+                <form className="navbar-form navbar-right" style={style} onSubmit={this.handleSubmit}>
+                    <div className="form-group">
+                        <input type="text"
+                               className="form-control"
+                               name="username"
+                               value={username}
+                               onChange={this.handleOnChange}
+                               placeholder="Username"/>
+                    </div>
+                    <div className="form-group">
+                        <input type="password"
+                               className="form-control"
+                               name="password"
+                               value={password}
+                               onChange={this.handleOnChange}
+                               placeholder="Password"/>
+                    </div>
+                    <button type="submit"
+                            className="btn btn-default"
+                            disabled={isLoading}>Sign In
+                    </button>
+                </form>
 
-                    <form className="navbar-form navbar-right" onSubmit={this.handleSubmit} >
-                        <div className="form-group">
-                            <input type="text"
-                                   className="form-control"
-                                   name="username"
-                                   value={username}
-                                   onChange={this.handleOnChange}
-                                   placeholder="Username"/>
-                        </div>
-                        <div className="form-group">
-                            <input type="password"
-                                   className="form-control"
-                                   name="password"
-                                   value={password}
-                                   onChange={this.handleOnChange}
-                                   placeholder="Password"/>
-                        </div>
-                        <button type="submit"
-                                className="btn btn-default"
-                                disabled={isLoading}>Sign In</button>
-                    </form>
             </div>
         )
     }
