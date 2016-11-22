@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactDom from 'react-dom';
 import {Posts} from './src/classes/Posts.js';
 import {tweets} from './data.js';
 // import {Page} from './src/ui/page.js';
@@ -7,7 +6,9 @@ import {tweets} from './data.js';
 import {Nav} from './src/ui/main-nav.js';
 
 class App extends React.Component {
-
+    constructor(props){
+        super(props);
+    }
 
     render() {
         return (
@@ -24,6 +25,5 @@ class App extends React.Component {
         );
     }
 }
-
 
 export default App;
